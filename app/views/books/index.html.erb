@@ -1,0 +1,103 @@
+<head>
+ <link rel="stylesheet" media="all" href="../../stylesheets/index.css" />  
+
+  
+</head>
+
+<body>
+    <p id="notice"></p>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>トラブル知らずのシステム設計</td>
+        <td>システム設計の要点を図解で説明してくれます</td>
+        <td><a class="show_7190" href="https://bookers-level1.herokuapp.com/books/7190">Show</a></td>
+        <td><a class="edit_7190" href="https://bookers-level1.herokuapp.com/books/7190/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7190" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7190">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>たのしいRuby</td>
+        <td>Rubyの入門におすすめです</td>
+        <td><a class="show_7191" href="https://bookers-level1.herokuapp.com/books/7191">Show</a></td>
+        <td><a class="edit_7191" href="https://bookers-level1.herokuapp.com/books/7191/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7191" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7191">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>入門Git</td>
+        <td>gitについての基本操作から内部構造まで解説してくれます</td>
+        <td><a class="show_7192" href="https://bookers-level1.herokuapp.com/books/7192">Show</a></td>
+        <td><a class="edit_7192" href="https://bookers-level1.herokuapp.com/books/7192/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7192" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7192">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>アルゴリズム図鑑</td>
+        <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+        <td><a class="show_7193" href="https://bookers-level1.herokuapp.com/books/7193">Show</a></td>
+        <td><a class="edit_7193" href="https://bookers-level1.herokuapp.com/books/7193/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7193" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7193">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>達人プログラマー</td>
+        <td>プログラマ入門者は必読！</td>
+        <td><a class="show_7194" href="https://bookers-level1.herokuapp.com/books/7194">Show</a></td>
+        <td><a class="edit_7194" href="https://bookers-level1.herokuapp.com/books/7194/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7194" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7194">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>データベース実践入門</td>
+        <td>効率的なSQL文を教えてくれます</td>
+        <td><a class="show_7195" href="https://bookers-level1.herokuapp.com/books/7195">Show</a></td>
+        <td><a class="edit_7195" href="https://bookers-level1.herokuapp.com/books/7195/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7195" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7195">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>本のタイトル</td>
+        <td>感想</td>
+        <td><a class="show_7197" href="https://bookers-level1.herokuapp.com/books/7197">Show</a></td>
+        <td><a class="edit_7197" href="https://bookers-level1.herokuapp.com/books/7197/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7197" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7197">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>感想</td>
+        <td><a class="show_7198" href="https://bookers-level1.herokuapp.com/books/7198">Show</a></td>
+        <td><a class="edit_7198" href="https://bookers-level1.herokuapp.com/books/7198/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7198" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7198">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>aiu</td>
+        <td>aiu</td>
+        <td><a class="show_7199" href="https://bookers-level1.herokuapp.com/books/7199">Show</a></td>
+        <td><a class="edit_7199" href="https://bookers-level1.herokuapp.com/books/7199/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_7199" rel="nofollow" data-method="delete" href="https://bookers-level1.herokuapp.com/books/7199">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+
+<h2>New book</h2>
+<%= form_with model:@book, local:true do |f| %>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "投稿" %>
+  
+<% end %>
+  
+
+</body>
